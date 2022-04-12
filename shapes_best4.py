@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
-
 import os
 # https://pypi.org/project/opencv-python/
 # pip install opencv-python
@@ -15,7 +8,7 @@ from random import randint
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Perceptron
  
-PATH =  'shapes\\'
+PATH = "...shapes\\"
 IMG_SIZE = 64
 shapes = ["circle", "square", "triangle", "star"]
 labels = []
@@ -88,6 +81,9 @@ for x_test, y_test, y_pred1 in bad_results:
     i+=1
 
 
+y_pred = perceptron.predict(X)
+perceptron.score(X,y)
+
 #validation, random shape!
 idx = randint(0,y_pred.size)
 #idx = randint(0,2994)
@@ -99,10 +95,9 @@ plt.show()
 #----------------------------------
 
 #check, predict  index number: ....
-y_pred = perceptron.predict(X)
-perceptron.score(X,y)
 
-index = 6505
+
+index = 12511
 index_array = np.array([index])
 
 #show what shape is for that index in dataset
@@ -120,4 +115,3 @@ for i, ind in enumerate(index_array, 1):
 plt.title(shapes[y_pred[index]])
 plt.imshow(X[index].reshape((64,64,3)))
 plt.show()
-

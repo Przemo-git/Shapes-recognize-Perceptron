@@ -93,7 +93,7 @@ idx = randint(0,y_pred.size)
 #idx = randint(0,2994)
 print(idx)
 plt.title(shapes[y_pred[idx]])
-plt.imshow(X_test[idx].reshape((64,64,3)))
+plt.imshow(X[idx].reshape((64,64,3)))
 plt.show()
 
 #----------------------------------
